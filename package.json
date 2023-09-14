@@ -1,0 +1,16 @@
+{
+  "name": "hono-vectara-reverse-proxy",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy --minify src/index.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "hono": "^3.6.0",
+    "http-proxy-middleware": "^2.0.6"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230821.0",
+    "wrangler": "^3.7.0"
+  }
+}

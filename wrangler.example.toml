@@ -1,0 +1,19 @@
+name = "hono-vectara-reverse-proxy"
+compatibility_date = "2023-01-01"
+[vars]
+corpus_id=
+customer_id=
+search_title=
+app_title=
+app_header_logo_height=
+app_header_logo_src=
+app_header_logo_alt=
+app_header_logo_link=
+search_logo_src=
+search_logo_height=
+enable_source_filters=
+summary_default_language=
+summary_num_sentences=
+summary_num_results=
+endpoint=
+api_key=
