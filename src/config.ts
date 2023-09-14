@@ -3,6 +3,7 @@ export const makeConfig = (env: Bindings) => {
     return {
             // Search
             corpus_id: env.corpus_id,
+            customer_id: env.customer_id,
 
             // App
             ux: env.ux,

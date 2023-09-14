@@ -10,8 +10,9 @@ app.use('*', cors({
     origin: '*',
     allowMethods: ['GET', 'POST', 'OPTIONS']
 }))
-app.get('/v1/query', (c) => {
-    return fetch(`https://${c.env.endpoint}`, {
+app.post('/v1/query', async (c) => {
+    const body = await c.req.text()
+    const response = await fetch(`https://${c.env.endpoint}/v1/query`, {
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json",
@@ -19,8 +20,11 @@ app.get('/v1/query', (c) => {
             "x-api-key": c.env.api_key,
             "grpc-timeout": "60S",
         },
+        body: body,
         method: 'POST',
     })
+    const json = await response.json()
+    return c.json(json)
 })
 
 app.post('/config', (c) => c.json(makeConfig(c.env)))
