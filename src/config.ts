@@ -1,5 +1,4 @@
 export const makeConfig = (env: Bindings) => {
-        console.log("makeConfig", env)
     /** NEVER PASS API_KEY TO THE CLIENT */
     return {
             // Search
